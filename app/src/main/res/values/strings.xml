@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BakingApp</string>
+    <string name="app_title">Dessert Me More</string>
+    <string name="name_step">Step</string>
+    <string name="next_step">next step</string>
+    <string name="total_time_one">1 hour 10 mins</string>
+    <string name="total_time_two">40 mins</string>
+    <string name="total_time_three">1 hour 30 mins</string>
+    <string name="total_time_four">1 hour 30 mins</string>
+    <string name="serves">serves</string>
+    <string name="total_person">8 people</string>
+    <string name="tab_recipe">Recipe</string>
+    <string name="detail_button_instructions">Make Dessert!</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam dictum tincidunt diam. Praesent in mauris eu tortor porttitor accumsan. Etiam egestas wisi a erat. Nullam faucibus mi quis velit. Nullam rhoncus aliquam metus. Proin mattis lacinia justo. Vivamus ac leo pretium faucibus.</string>
+    <string name="backdrop_title">backdrop title</string>
+    <string name="backdrop_subtitle">backdrop subtitle</string>
+
+</resources>
