@@ -1,6 +1,11 @@
 package com.example.android.bakingapp.model;
 
-public class Step {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.util.ArrayList;
+
+public class Step extends ArrayList<Parcelable> implements Parcelable {
 
     private int stepId;
     private String shortDescription;
@@ -16,6 +21,40 @@ public class Step {
         this.videoUrl = videoUrl;
         this.thumbnailUrl = thumbnailUrl;
     }
+
+    protected Step(Parcel parcel) {
+        stepId = parcel.readInt();
+        shortDescription = parcel.readString();
+        description = parcel.readString();
+        videoUrl = parcel.readString();
+        thumbnailUrl = parcel.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(stepId);
+        dest.writeString(shortDescription);
+        dest.writeString(description);
+        dest.writeString(videoUrl);
+        dest.writeString(thumbnailUrl);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Step> CREATOR = new Creator<Step>() {
+        @Override
+        public Step createFromParcel(Parcel p) {
+            return new Step(p);
+        }
+
+        @Override
+        public Step[] newArray(int size) {
+            return new Step[size];
+        }
+    };
 
     public int getStepId() {
         return stepId;
@@ -36,4 +75,5 @@ public class Step {
     public String getThumbnailUrl() {
         return thumbnailUrl;
     }
+
 }

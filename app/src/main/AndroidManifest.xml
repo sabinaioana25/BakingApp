@@ -12,15 +12,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.MainActivity">
+        <activity
+            android:name=".Activities.MainActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.DetailSingleDessertActivity" />
-        <activity android:name=".Activity.VideoInstructionsActivity"></activity>
+        <activity
+            android:name=".Activities.DetailSingleDessertActivity"
+            android:parentActivityName=".Activities.MainActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".Activities.DetailStepActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".Activities.DetailSingleDessertActivity" />
     </application>
 
 </manifest>

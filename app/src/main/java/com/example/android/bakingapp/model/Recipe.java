@@ -9,6 +9,7 @@ import java.util.List;
 public class Recipe implements Parcelable {
 
     public static String TAG = Recipe.class.getSimpleName();
+
     // pojos
     private int recipeId;
     private String name;
@@ -91,6 +92,6 @@ public class Recipe implements Parcelable {
         dest.writeString(servings);
         dest.writeString(image);
         dest.writeList(ingredients);
-//        dest.writeList(steps);
+        dest.writeList(steps);
     }
 }

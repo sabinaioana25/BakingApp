@@ -2,9 +2,10 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
     <FrameLayout
-        android:id="@+id/detail_container_step_recipe"
-        android:name="com.example.android.bakingapp.Fragments.FragmentDetailStep"
+        android:id="@+id/tablet_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"></FrameLayout>
 </android.support.constraint.ConstraintLayout>

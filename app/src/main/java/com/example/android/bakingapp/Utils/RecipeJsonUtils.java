@@ -60,7 +60,7 @@ public class RecipeJsonUtils {
 
     public static List<Recipe> extractFeaturesFromJson(String jsonResponse) {
 
-        URL url = NetworkUtils.createURL(jsonResponse);
+//        URL url = NetworkUtils.createURL(jsonResponse);
         int recipeID = 0;
         String recipeName = null;
         String recipeTotalServings = null;
@@ -99,7 +99,6 @@ public class RecipeJsonUtils {
                 if (recipeImagePath != null) {
                 } else return null;
 
-
                 // ingredients list
                 JSONArray jsonArrayIngredients = jsonObject.optJSONArray(DETAIL_RECIPE_INGREDIENTS);
                 if (jsonArrayIngredients.length() != 0) {
@@ -137,7 +136,7 @@ public class RecipeJsonUtils {
                                 (DETAIL_RECIPE_STEP_THUMBNAIL);
 
                         stepListMain.add(new Step(stepID,
-                                stepShortDescription, stepDescription,
+                                stepShortDescription, stepDescription.substring(3),
                                 stepVideoUrl, stepThumbnailUrl));
                     }
                 }

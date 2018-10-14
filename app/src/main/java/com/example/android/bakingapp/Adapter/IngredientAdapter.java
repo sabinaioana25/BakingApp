@@ -16,7 +16,7 @@ import java.util.List;
 public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter
         .IngredientViewHolder> {
 
-    final static String TAG = Ingredient.class.getSimpleName();
+    final static String LOG_TAG = Ingredient.class.getSimpleName();
     public Context context;
     private static List<Ingredient> ingredientList;
 
@@ -59,7 +59,6 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter
 
         public IngredientViewHolder(View itemView) {
             super(itemView);
-
             ingredientQuantityTextView = (TextView) itemView.findViewById(R.id.detail_quantity);
             ingredientMeasureTextView = (TextView) itemView.findViewById(R.id.detail_measure);
             ingredientTypeTextView = (TextView) itemView.findViewById(R.id.detail_type);

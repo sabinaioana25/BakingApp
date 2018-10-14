@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.android.bakingapp.ClickListener.RecipeClickListener;
 import com.example.android.bakingapp.R;
 import com.example.android.bakingapp.Utils.RecipesImageAssets;
 import com.example.android.bakingapp.model.Recipe;
@@ -19,10 +20,10 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
 
     private static RecipeClickListener listener;
 
-    // interface
-    public static interface RecipeClickListener {
-        void onRecipeClick(int position);
-    }
+//    // interface
+//    public static interface RecipeClickListener {
+//        void onRecipeClick(int position);
+//    }
 
     private final static String TAG = RecipeAdapter.class.getSimpleName();
     public Context context;

@@ -1,7 +1,6 @@
 package com.example.android.bakingapp.Loader;
 
 import android.annotation.SuppressLint;
-import android.content.AsyncTaskLoader;
 import android.content.Context;
 
 import com.example.android.bakingapp.Utils.RecipeJsonUtils;
@@ -9,7 +8,7 @@ import com.example.android.bakingapp.model.Recipe;
 
 import java.util.List;
 
-public class RecipeLoader extends AsyncTaskLoader<List<Recipe>> {
+public class RecipeLoader extends android.support.v4.content.AsyncTaskLoader<List<Recipe>> {
 
     private String url;
     private static final String TAG = RecipeLoader.class.getSimpleName();
