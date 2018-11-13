@@ -13,10 +13,14 @@ import com.example.android.bakingapp.model.Step;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class StepAdapter extends RecyclerView.Adapter<StepAdapter.StepViewHolder> {
 
     final static String LOG_TAG = Step.class.getSimpleName();
-    public final List<Step> stepList;
+    private static final String STEP_LIST = "stepList: ";
+    public List<Step> stepList;
     public Context context;
     final private StepClickListener stepClickListener;
 
@@ -32,7 +36,6 @@ public class StepAdapter extends RecyclerView.Adapter<StepAdapter.StepViewHolder
 
     @Override
     public StepViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         View stepItemLayout;
         stepItemLayout = LayoutInflater.from(parent.getContext()).inflate(R.layout
                 .activity_detail_step_item, parent, false);
@@ -44,7 +47,7 @@ public class StepAdapter extends RecyclerView.Adapter<StepAdapter.StepViewHolder
         if (stepList != null) {
             return stepList.size();
         }
-        Log.e(LOG_TAG, "stepList: " + stepList.size());
+        Log.e(LOG_TAG, STEP_LIST + stepList.size());
         return 0;
     }
 
@@ -56,19 +59,20 @@ public class StepAdapter extends RecyclerView.Adapter<StepAdapter.StepViewHolder
     }
 
     public class StepViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
+        @BindView(R.id.detail_step_id)
         TextView stepIdTextView;
+        @BindView(R.id.detail_step_sh_descr)
         TextView stepShortDescTextView;
 
         public StepViewHolder(View itemView) {
             super(itemView);
-            stepIdTextView = itemView.findViewById(R.id.detail_step_id);
-            stepShortDescTextView = itemView.findViewById(R.id.detail_step_sh_descr);
+            ButterKnife.bind(this, itemView);
             itemView.setOnClickListener(this);
         }
 
         public void onClick(View v) {
-            int clickedPosition = getAdapterPosition();
-            stepClickListener.onStepListItemClick(clickedPosition);
+            stepClickListener.onStepListItemClick(getAdapterPosition());
         }
     }
 }

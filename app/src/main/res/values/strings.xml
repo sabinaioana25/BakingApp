@@ -2,6 +2,7 @@
     <string name="app_name">BakingApp</string>
     <string name="app_title">Dessert Me More</string>
     <string name="step_name">Step</string>
+    <string name="step_title_list">Steps</string>
     <string name="next_step">next step</string>
     <string name="total_time_one">1 hour 10 mins</string>
     <string name="total_time_two">40 mins</string>
@@ -16,5 +17,24 @@
     <string name="backdrop_subtitle">backdrop subtitle</string>
     <string name="step_id">id</string>
     <string name="previous_step">previous step</string>
+    <string name="pause">Pause</string>
+    <string name="play">Play</string>
+    <string name="restart">Restart</string>
+    <string name="notification_text">Press play to hear the instruction</string>
+    <string name="hear_instructions">Listen</string>
+    <string name="selected_position">SELECTED_POSITION</string>
+    <string name="RECIPE_STATE_INT">INT_STATE</string>
+    <string name="RECIPE_STATE_STRING">STRING_STATE</string>
+
+    // widget components
+    <string name="add_widget">Add widget</string>
+    <string name="appwidget_ingredients">Ingredients</string>
+    <string name="appwidget_text_ingredient_name">Ingredient</string>
+    <string name="appwidget_text_quantity">Quantity</string>
+    <string name="appwidget_text_measure">Measure</string>
+    <string name="confirmation_message">Recipe Ingredients added to widget</string>
+    <string name="not_added_to_widget_message">Recipe Ingredients not added to widget</string>
+    <string name="first_step_toast_message">This is the first step</string>
+    <string name="last_message_toast_message">This is the last step</string>
 
 </resources>

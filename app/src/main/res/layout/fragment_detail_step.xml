@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -14,54 +15,54 @@
             android:id="@+id/detail_activity_step_short_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/recipe_name_margin"
+            android:layout_marginLeft="@dimen/recipe_name_margin"
+            android:layout_marginStart="@dimen/recipe_name_margin"
+            android:layout_marginTop="@dimen/recipe_name_margin"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_two"
+            android:textStyle="bold"
             tools:text="Recipe Intro" />
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <ImageView
+
+            <com.google.android.exoplayer2.ui.SimpleExoPlayerView
                 android:id="@+id/detail_activity_step_video"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/video_height"
+                android:layout_marginBottom="@dimen/recipe_name_margin"
+                android:layout_marginTop="@dimen/recipe_name_margin"
+                android:background="@android:color/black"
+                app:resize_mode="fit" />
+
+            <ProgressBar
+                android:id="@+id/exo_progress_bar"
+                style="@android:style/Widget.ProgressBar.Inverse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                tools:src="@drawable/video_background" />
-
-            <ImageButton
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:background="@drawable/play_button" />
+                android:layout_centerInParent="true"
+                android:progress="10"
+                android:visibility="gone" />
         </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/detail_activity_step_thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/detail_activity_step_description"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/recipe_name_margin"
+            android:layout_marginBottom="@dimen/recipe_name_margin"
+            android:layout_marginTop="@dimen/recipe_name_margin"
+            android:padding="@dimen/widget_margin"
+            android:textSize="@dimen/text_size_one"
+            android:textStyle="normal"
             tools:text="@string/lorem_ipsum" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/detail_activity_step_button_previous"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:layout_weight="1"
-                android:text="@string/previous_step" />
-
-            <Button
-                android:id="@+id/detail_activity_step_button_next"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:layout_weight="1"
-                android:text="@string/next_step" />
-        </LinearLayout>
-
     </LinearLayout>
 </ScrollView>

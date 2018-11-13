@@ -19,16 +19,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
-                android:src="@drawable/nutella_pie_recipe"
-                tools:ignore="ContentDescription" />
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/nutella_pie_recipe" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/recipe_ingredient_type_margin"
+                android:layout_marginTop="@dimen/recipe_name_margin"
+                android:text="@string/appwidget_ingredients"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_two"
+                android:textStyle="bold" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="8dp">
+                android:layout_marginBottom="@dimen/card_elevation"
+                android:layout_marginLeft="@dimen/recipe_name_margin"
+                android:layout_marginRight="@dimen/recipe_name_margin"
+                android:layout_marginTop="@dimen/card_elevation">
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/ingredient_list_recyler_view"
@@ -39,19 +49,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:text="Instructions"
+                android:layout_marginLeft="@dimen/recipe_ingredient_type_margin"
+                android:layout_marginTop="@dimen/recipe_name_margin"
+                android:text="@string/step_title_list"
+                android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/text_size_two"
                 android:textStyle="bold" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="8dp">
+                android:layout_marginBottom="@dimen/card_elevation"
+                android:layout_marginLeft="@dimen/recipe_name_margin"
+                android:layout_marginRight="@dimen/recipe_name_margin"
+                android:layout_marginTop="@dimen/card_elevation">
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/step_list_recycler_view"

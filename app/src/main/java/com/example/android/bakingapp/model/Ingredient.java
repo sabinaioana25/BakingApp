@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 
-public class Ingredient extends ArrayList<Parcelable> implements Parcelable{
+public class Ingredient extends ArrayList<Parcelable> implements Parcelable {
     private String quantity;
     private String measure;
     private String ingredient;
@@ -56,5 +56,17 @@ public class Ingredient extends ArrayList<Parcelable> implements Parcelable{
 
     public String getIngredient() {
         return ingredient;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+
+    public void setMeasure(String measure) {
+        this.measure = measure;
+    }
+
+    public void setIngredient(String ingredient) {
+        this.ingredient = ingredient;
     }
 }

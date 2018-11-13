@@ -1,36 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="8dp"
-    android:layout_marginRight="8dp"
-    android:layout_marginTop="8dp"
+    android:layout_marginLeft="@dimen/card_elevation"
+    android:layout_marginRight="@dimen/card_elevation"
+    android:elevation="@dimen/main_recipe_clock_margin_top"
     android:orientation="horizontal"
-    android:weightSum="10">
+    android:weightSum="10"
+    tools:targetApi="lollipop">
 
     <TextView
         android:id="@+id/detail_quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginLeft="@dimen/main_recipe_clock_margin_right"
+        android:layout_marginRight="@dimen/main_recipe_clock_margin_right"
+        android:fontFamily="@font/charmonman_regular"
+        android:paddingRight="@dimen/card_elevation"
+        android:textSize="@dimen/text_size_two"
+        android:textStyle="bold"
+        tools:ignore="RtlHardcoded"
         tools:text="3" />
 
     <TextView
         android:id="@+id/detail_measure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginLeft="@dimen/main_recipe_clock_margin_right"
+        android:layout_marginRight="@dimen/main_recipe_clock_margin_right"
+        android:gravity="right"
         android:textAllCaps="false"
+        android:textSize="@dimen/text_size_one"
+        android:textStyle="normal"
         tools:text="tbsp" />
 
     <TextView
         android:id="@+id/detail_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="@dimen/recipe_ingredient_type_margin"
+        android:layout_marginLeft="@dimen/main_recipe_clock_margin_right"
+        android:layout_marginRight="@dimen/main_recipe_clock_margin_right"
+        android:layout_marginStart="@dimen/recipe_ingredient_type_margin"
+        android:layout_weight="0"
+        android:gravity="center_horizontal"
+        android:maxLines="2"
+        android:textSize="@dimen/text_size_one"
+        android:textStyle="normal"
+        tools:ignore="InefficientWeight"
         tools:text="sugar" />
-
 </LinearLayout>

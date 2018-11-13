@@ -16,14 +16,12 @@ import com.example.android.bakingapp.model.Recipe;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder> {
 
     private static RecipeClickListener listener;
-
-//    // interface
-//    public static interface RecipeClickListener {
-//        void onRecipeClick(int position);
-//    }
 
     private final static String TAG = RecipeAdapter.class.getSimpleName();
     public Context context;
@@ -47,7 +45,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
     public void onBindViewHolder(@NonNull RecipeViewHolder holder, int position) {
 
         Recipe recipe = recipeList.get(position);
-        holder.imageViewRecipe.setImageResource(RecipesImageAssets.recipeImages[position]);
+        holder.imageViewRecipe.setImageResource(RecipesImageAssets.recipeImageList.get(position));
         holder.textViewRecipeName.setText(recipe.getName());
         holder.textViewTotalServings.setText(recipe.getServings());
     }
@@ -65,17 +63,18 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
     public static class RecipeViewHolder extends RecyclerView.ViewHolder implements View
             .OnClickListener {
 
+        @BindView(R.id.image_dessert)
         ImageView imageViewRecipe;
+        @BindView(R.id.text_view_dessert_name)
         TextView textViewRecipeName;
+        @BindView(R.id.text_view_servings)
         TextView textViewTotalServings;
 
         // constructor
         RecipeViewHolder(final View itemView) {
             super(itemView);
 
-            imageViewRecipe = (ImageView) itemView.findViewById(R.id.image_dessert);
-            textViewRecipeName = (TextView) itemView.findViewById(R.id.text_view_dessert_name);
-            textViewTotalServings = (TextView) itemView.findViewById(R.id.text_view_servings);
+            ButterKnife.bind(this, itemView);
             itemView.setOnClickListener(this);
         }
 
@@ -89,7 +88,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
         }
     }
 
-    public void InsertListItems(List<Recipe> recipeData) {
+    public void insertListItems(List<Recipe> recipeData) {
         this.recipeList = recipeData;
         notifyDataSetChanged();
     }

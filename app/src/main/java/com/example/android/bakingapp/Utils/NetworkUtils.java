@@ -17,6 +17,8 @@ public class NetworkUtils {
 
     private static final int READ_TIME_OUT = 1000;
     private static final int CONN_TIME_OUT = 1000;
+    private static final String ERROR_RESPONSE_MESSAGE = "Error response code: ";
+    private static final String ERROR_RETRIEVING_JSON_MESSAGE = "Problem retrieving the book JSON result.";
 
     private NetworkUtils() {}
 
@@ -49,11 +51,11 @@ public class NetworkUtils {
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
             } else {
-                Log.e(TAG, "Error response code: " + urlConnection.getResponseCode());
+                Log.e(TAG, ERROR_RESPONSE_MESSAGE + urlConnection.getResponseCode());
             }
 
         } catch (IOException e) {
-            Log.e(TAG, "Problem retrieving the book JSON result.", e);
+            Log.e(TAG, ERROR_RETRIEVING_JSON_MESSAGE, e);
         } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();
