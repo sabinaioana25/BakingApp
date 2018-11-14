@@ -21,7 +21,7 @@ import static com.example.android.bakingapp.Utils.NetworkUtils.makeHttpRequest;
 
 public class RecipeJsonUtils {
 
-    private static final String TAG = RecipeJsonUtils.class.getSimpleName();
+    private static final String LOG_TAG = RecipeJsonUtils.class.getSimpleName();
 
     // DetailActivity Main Components
     private static final String DETAIL_RECIPE_ID = "id";
@@ -53,28 +53,28 @@ public class RecipeJsonUtils {
         try {
             jsonResponse = makeHttpRequest(url);
         } catch (IOException e) {
-            Log.e(TAG, "IOException ", e);
+            Log.e(LOG_TAG, "IOException ", e);
         }
         return extractFeaturesFromJson(jsonResponse);
     }
 
     public static List<Recipe> extractFeaturesFromJson(String jsonResponse) {
 
-        int recipeID = 0;
-        String recipeName = null;
-        String recipeTotalServings = null;
-        String ingredientQuantity = null;
-        String ingredientMeasure = null;
-        String ingredientType = null;
+        int recipeID;
+        String recipeName;
+        String recipeTotalServings;
+        String ingredientQuantity;
+        String ingredientMeasure;
+        String ingredientType;
 
-        int stepID = 0;
-        String stepShortDescription = null;
-        String stepDescription = null;
+        int stepID;
+        String stepShortDescription;
+        String stepDescription;
 
-        String stepVideoUrl = null;
+        String stepVideoUrl;
 
-        String stepThumbnailUrl = null;
-        String recipeImagePath = null;
+        String stepThumbnailUrl;
+        String recipeImagePath;
 
         // empty List<Recipe>
         List<Recipe> recipeListMain = new ArrayList<>();
@@ -95,7 +95,9 @@ public class RecipeJsonUtils {
                 recipeName = jsonObject.getString(DETAIL_RECIPE_NAME);
                 recipeTotalServings = jsonObject.getString(DETAIL_RECIPE_SERVINGS);
                 recipeImagePath = jsonObject.optString(DETAIL_RECIPE_IMAGE);
+                //noinspection StatementWithEmptyBody
                 if (recipeImagePath != null) {
+                    Log.e(LOG_TAG, "No image to show");
                 } else return null;
 
                 // ingredients list

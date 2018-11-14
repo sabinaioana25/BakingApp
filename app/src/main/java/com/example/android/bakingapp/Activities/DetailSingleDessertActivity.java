@@ -14,6 +14,7 @@ import com.example.android.bakingapp.R;
 import com.example.android.bakingapp.Widget.BakingService;
 import com.example.android.bakingapp.model.Recipe;
 
+@SuppressWarnings("unused")
 public class DetailSingleDessertActivity extends AppCompatActivity {
 
     // constants
@@ -22,7 +23,8 @@ public class DetailSingleDessertActivity extends AppCompatActivity {
     private static final String POSITION = "position";
     private static final String TWO_PANE = "twoPaneMode";
 
-    public final String LOG_TAG = DetailSingleDessertActivity.class.getSimpleName();
+    // --Commented out by Inspection (11/14/2018 7:53 PM):public final String LOG_TAG =
+    // DetailSingleDessertActivity.class.getSimpleName();
     Recipe recipe;
     public static int recipeId;
     public static String recipeName;
@@ -75,6 +77,7 @@ public class DetailSingleDessertActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressWarnings("SameReturnValue")
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
@@ -82,21 +85,24 @@ public class DetailSingleDessertActivity extends AppCompatActivity {
         return true;
     }
 
+    @SuppressWarnings("UnusedAssignment")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
+        //noinspection UnusedAssignment
         boolean addedRecipe = true;
 
         if (itemId == R.id.action_add_to_widget) {
             FragmentDetailSingleDessert.ingredients = recipe.getIngredients();
             addedRecipe = BakingService.startAddRecipes(this);
-        }
 
-        if (addedRecipe) {
-            Toast.makeText(this, R.string.confirmation_message, Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, R.string.not_added_to_widget_message, Toast.LENGTH_SHORT)
-                    .show();
+            // check if the recipe was added to the widget
+            if (addedRecipe) {
+                Toast.makeText(this, R.string.confirmation_message, Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, R.string.not_added_to_widget_message, Toast.LENGTH_SHORT)
+                        .show();
+            }
         }
         return super.onOptionsItemSelected(item);
     }

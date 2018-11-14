@@ -36,11 +36,12 @@ public class FragmentDetailSingleDessert extends Fragment implements StepAdapter
     private static final String STEP_LIST_KEY = "stepList";
     private static final String RECIPE_KEY = "recipe";
     private static final String CLICK_ITEM_INDEX_KEY = "clickItemIndex";
-    private String INGREDIENT_LIST_KEY = "ingredientList";
+    private final String INGREDIENT_LIST_KEY = "ingredientList";
 
+    @SuppressWarnings("WeakerAccess")
     IngredientAdapter ingredientAdapter;
     StepAdapter stepAdapter;
-    @BindView(R.id.ingredient_list_recyler_view)
+    @BindView(R.id.ingredient_list_recycler_view)
     RecyclerView ingredientRecyclerView;
     @BindView(R.id.step_list_recycler_view)
     RecyclerView stepRecyclerView;
@@ -55,12 +56,15 @@ public class FragmentDetailSingleDessert extends Fragment implements StepAdapter
     String stepShortDescription;
     String stepDescription;
 
+    @SuppressWarnings("Convert2Diamond")
     public static List<Ingredient> ingredients = new ArrayList<Ingredient>();
-    List<Step> steps = new ArrayList<Step>();
+    @SuppressWarnings("Convert2Diamond")
+    public static List<Step> steps = new ArrayList<Step>();
 
     // mandatory empty constructor
     public FragmentDetailSingleDessert() {}
 
+    @SuppressWarnings("unused")
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -120,6 +124,7 @@ public class FragmentDetailSingleDessert extends Fragment implements StepAdapter
                         recipe.getSteps().get(position).getVideoUrl(),
                         recipe.getSteps().get(position).getThumbnailUrl());
 
+                assert fragmentManager != null;
                 fragmentManager.beginTransaction()
                         .replace(R.id.container_detail_step, fragmentDetailStep)
                         .commit();
@@ -138,6 +143,7 @@ public class FragmentDetailSingleDessert extends Fragment implements StepAdapter
         super.onSaveInstanceState(outState);
     }
 
+    @SuppressWarnings("ConstantConditions")
     @Override
     public void onStepListItemClick(int clickItemIndex) {
         if (twoPane) {

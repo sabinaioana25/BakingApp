@@ -24,13 +24,13 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
     private static RecipeClickListener listener;
 
     private final static String TAG = RecipeAdapter.class.getSimpleName();
-    public Context context;
+    public final Context context;
     private static List<Recipe> recipeList;
 
     public RecipeAdapter(Context context, RecipeClickListener
             recipeClickListener) {
         this.context = context;
-        this.listener = recipeClickListener;
+        listener = recipeClickListener;
     }
 
     @NonNull

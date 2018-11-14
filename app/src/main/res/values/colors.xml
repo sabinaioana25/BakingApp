@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#854442</color>
+    <color name="widget_background_color">#68854442</color>
     <color name="colorPrimaryDark">#4b3832</color>
     <color name="colorAccent">#fff4e6</color>
     <color name="colorPrimaryThree">#be9b7b</color>
     <color name="colorPrimaryTwo">#fff</color>
-    <color name="colorPrimaryDarkTwo">#3c2f2f</color>
-    <color name="colorTextBox">#4b3832</color>
 </resources>

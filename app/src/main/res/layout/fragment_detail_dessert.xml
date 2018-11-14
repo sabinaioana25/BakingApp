@@ -30,7 +30,8 @@
                 android:text="@string/appwidget_ingredients"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/text_size_two"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/recipe_ingredient_type_margin" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -41,7 +42,7 @@
                 android:layout_marginTop="@dimen/card_elevation">
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/ingredient_list_recyler_view"
+                    android:id="@+id/ingredient_list_recycler_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
@@ -54,7 +55,8 @@
                 android:text="@string/step_title_list"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/text_size_two"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/recipe_ingredient_type_margin" />
 
             <RelativeLayout
                 android:layout_width="match_parent"

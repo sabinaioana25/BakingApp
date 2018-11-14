@@ -10,8 +10,10 @@ import android.support.annotation.Nullable;
 import com.example.android.bakingapp.Activities.DetailSingleDessertActivity;
 import com.example.android.bakingapp.R;
 
+@SuppressWarnings("SameReturnValue")
 public class BakingService extends IntentService {
 
+    @SuppressWarnings("WeakerAccess")
     public static final String ACTION_ADD_RECIPE =
             "com.example.android.bakingapp.widget.action." +
                     "add_recipe";
@@ -21,6 +23,7 @@ public class BakingService extends IntentService {
         super(BAKING_APP_SERVICE_NAME);
     }
 
+    @SuppressWarnings("SameReturnValue")
     public static boolean startAddRecipes(Context context) {
         Intent intent = new Intent(context, BakingService.class);
         intent.setAction(ACTION_ADD_RECIPE);

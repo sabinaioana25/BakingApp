@@ -25,10 +25,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/detail_button_margin"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryThree"
+            android:background="@drawable/activity_button_anim"
             android:text="@string/previous_step"
             android:textColor="@color/cardview_light_background"
-            tools:ignore="NestedWeights" />
+            tools:ignore="ButtonStyle,NestedWeights" />
 
         <Button
             android:id="@+id/detail_activity_step_button_next"
@@ -36,8 +36,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/detail_button_margin"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryThree"
+            android:background="@drawable/activity_button_anim"
             android:text="@string/next_step"
-            android:textColor="@color/cardview_light_background" />
+            android:textColor="@color/cardview_light_background"
+            tools:ignore="ButtonStyle" />
     </LinearLayout>
 </LinearLayout>

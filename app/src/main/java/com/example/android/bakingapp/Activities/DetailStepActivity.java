@@ -19,11 +19,12 @@ import com.example.android.bakingapp.model.Recipe;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+@SuppressWarnings("EmptyMethod")
 public class DetailStepActivity extends AppCompatActivity {
 
     private static final String RECIPE = "recipe";
     private static final String CLICK_INDEX = "clickItemIndex";
-    public final String LOG_TAG = DetailStepActivity.class.getSimpleName();
+    // --Commented out by Inspection (11/14/2018 8:03 PM):public final String LOG_TAG = DetailStepActivity.class.getSimpleName();
     Recipe recipe;
     int position;
     public int stepIndex;
@@ -129,6 +130,7 @@ public class DetailStepActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressWarnings("EmptyMethod")
     @Override
     public void onBackPressed() {
         super.onBackPressed();

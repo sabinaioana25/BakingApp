@@ -3,15 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/recipe_step_height"
-    android:layout_marginEnd="@dimen/main_recipe_clock_margin_right"
     android:layout_marginStart="@dimen/main_recipe_clock_margin_right"
+    android:layout_marginEnd="@dimen/main_recipe_clock_margin_right"
     android:padding="@dimen/main_recipe_clock_margin_right">
 
     <LinearLayout
-        android:id="@+id/button_name_step"
         android:layout_width="match_parent"
         android:layout_height="@dimen/recipe_step_height"
-        android:background="@color/cardview_light_background"
+        android:background="@drawable/step_button_anim"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 

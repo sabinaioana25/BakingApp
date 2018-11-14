@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="@dimen/card_elevation"
-    android:layout_marginRight="@dimen/card_elevation"
+    android:layout_marginLeft="@dimen/recipe_name_margin"
+    android:layout_marginRight="@dimen/recipe_name_margin"
     android:elevation="@dimen/main_recipe_clock_margin_top"
     android:orientation="horizontal"
-    android:weightSum="10"
     tools:targetApi="lollipop">
 
     <TextView
         android:id="@+id/detail_quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/main_recipe_clock_margin_right"
-        android:layout_marginRight="@dimen/main_recipe_clock_margin_right"
         android:fontFamily="@font/charmonman_regular"
-        android:paddingRight="@dimen/card_elevation"
+        android:paddingRight="@dimen/recipe_step_height"
         android:textSize="@dimen/text_size_two"
         android:textStyle="bold"
-        tools:ignore="RtlHardcoded"
+        tools:ignore="RtlHardcoded,RtlSymmetry"
         tools:text="3" />
 
     <TextView
         android:id="@+id/detail_measure"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/main_recipe_clock_margin_right"
+        android:layout_marginEnd="@dimen/main_recipe_clock_margin_right"
         android:layout_marginRight="@dimen/main_recipe_clock_margin_right"
-        android:gravity="right"
+        android:layout_weight="2"
         android:textAllCaps="false"
         android:textSize="@dimen/text_size_one"
         android:textStyle="normal"
@@ -38,15 +34,11 @@
 
     <TextView
         android:id="@+id/detail_type"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/recipe_ingredient_type_margin"
-        android:layout_marginLeft="@dimen/main_recipe_clock_margin_right"
-        android:layout_marginRight="@dimen/main_recipe_clock_margin_right"
-        android:layout_marginStart="@dimen/recipe_ingredient_type_margin"
-        android:layout_weight="0"
-        android:gravity="center_horizontal"
+        android:layout_weight="1"
         android:maxLines="2"
+        android:layout_marginBottom="@dimen/main_recipe_clock_margin_top"
         android:textSize="@dimen/text_size_one"
         android:textStyle="normal"
         tools:ignore="InefficientWeight"

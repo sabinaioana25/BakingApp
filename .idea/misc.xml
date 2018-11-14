@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Fragments.FragmentDetailStep position" />
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Activities.DetailSingleDessertActivity recipeId" />
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Fragments.FragmentDetailSingleDessert LOG_TAG" />
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Adapter.IngredientAdapter context" />
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Tests.RecipeActivityTest bundle" />
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Adapter.RecipeAdapter context" />
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Adapter.StepAdapter context" />
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Adapter.IngredientAdapter LOG_TAG" />
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Tests.RecipeActivityTest NUTELLA_PIE" />
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Tests.RecipeActivityTest recipe" />
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Tests.RecipeActivityTest RECIPE_NAME" />
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Adapter.RecipeAdapter TAG" />
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Utils.RecipesImageAssets recipeImageList" />
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Adapter.StepAdapter.StepViewHolder stepIdTextView" />
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Utils.SimpleDividerItemDecoration mDivider" />
+      <entry_point TYPE="field" FQNAME="com.example.android.bakingapp.Adapter.RecipeAdapter.RecipeViewHolder imageViewRecipe" />
+    </entry_points>
+    <pattern value="com.example.android.bakingapp.model.Recipe" method="getImage" />
+    <pattern value="com.example.android.bakingapp.model.Step" method="setDescription" />
+    <pattern value="com.example.android.bakingapp.model.Ingredient" method="setIngredient" />
+    <pattern value="com.example.android.bakingapp.model.Ingredient" method="setMeasure" />
+    <pattern value="com.example.android.bakingapp.model.Ingredient" method="setQuantity" />
+    <pattern value="com.example.android.bakingapp.Fragments.FragmentDetailSingleDessert" method="onSaveInstanceState" />
+    <pattern value="com.example.android.bakingapp.model.Recipe" method="describeContents" />
+    <pattern value="com.example.android.bakingapp.Adapter.RecipeAdapter" method="getItemCount" />
+    <pattern value="com.example.android.bakingapp.Adapter.StepAdapter" method="getItemCount" />
+    <pattern value="com.example.android.bakingapp.Utils.RecipesImageAssets" />
+    <pattern value="com.example.android.bakingapp.Adapter.RecipeAdapter" method="onBindViewHolder" />
+    <pattern value="com.example.android.bakingapp.Adapter.StepAdapter" method="onBindViewHolder" />
+    <pattern value="com.example.android.bakingapp.Adapter.RecipeAdapter.RecipeViewHolder" method="onClick" />
+    <pattern value="com.example.android.bakingapp.Adapter.StepAdapter.StepViewHolder" method="onClick" />
+    <pattern value="com.example.android.bakingapp.Adapter.RecipeAdapter" method="onCreateViewHolder" />
+    <pattern value="com.example.android.bakingapp.Adapter.StepAdapter" method="onCreateViewHolder" />
+    <pattern value="com.example.android.bakingapp.Tests.RecipeActivityTest" />
+    <pattern value="com.example.android.bakingapp.Adapter.RecipeAdapter" />
+    <pattern value="com.example.android.bakingapp.Adapter.RecipeAdapter.RecipeViewHolder" />
+    <pattern value="com.example.android.bakingapp.model.Step" method="setShortDescription" />
+    <pattern value="com.example.android.bakingapp.model.Step" method="setStepId" />
+    <pattern value="com.example.android.bakingapp.model.Step" method="setThumbnailUrl" />
+    <pattern value="com.example.android.bakingapp.model.Step" method="setVideoUrl" />
+    <pattern value="com.example.android.bakingapp.Utils.SimpleDividerItemDecoration" />
+    <pattern value="com.example.android.bakingapp.Utils.SimpleDividerItemDecoration" method="SimpleDividerItemDecoration" />
+    <pattern value="com.example.android.bakingapp.model.Step" />
+    <pattern value="com.example.android.bakingapp.Adapter.StepAdapter" />
+    <pattern value="com.example.android.bakingapp.Adapter.StepAdapter.StepViewHolder" />
+    <pattern value="com.example.android.bakingapp.model.Step" method="writeToParcel" />
+    <pattern value="com.example.android.bakingapp.model.Ingredient" method="writeToParcel" />
+    <pattern value="com.example.android.bakingapp.ClickListener.RecipeClickListener" method="onRecipeClick" />
+    <pattern value="com.example.android.bakingapp.model.Recipe" method="getServings" />
+    <pattern value="com.example.android.bakingapp.Fragments.FragmentDetailSingleDessert" method="onStepListItemClick" />
+  </component>
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
     <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />

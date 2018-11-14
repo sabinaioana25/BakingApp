@@ -5,16 +5,8 @@
     <string name="step_title_list">Steps</string>
     <string name="next_step">next step</string>
     <string name="total_time_one">1 hour 10 mins</string>
-    <string name="total_time_two">40 mins</string>
-    <string name="total_time_three">1 hour 30 mins</string>
-    <string name="total_time_four">1 hour 30 mins</string>
-    <string name="serves">serves</string>
     <string name="total_person">8 people</string>
-    <string name="tab_recipe">Recipe</string>
-    <string name="detail_button_instructions">Make Dessert!</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam dictum tincidunt diam. Praesent in mauris eu tortor porttitor accumsan. Etiam egestas wisi a erat. Nullam faucibus mi quis velit. Nullam rhoncus aliquam metus. Proin mattis lacinia justo. Vivamus ac leo pretium faucibus.</string>
-    <string name="backdrop_title">backdrop title</string>
-    <string name="backdrop_subtitle">backdrop subtitle</string>
     <string name="step_id">id</string>
     <string name="previous_step">previous step</string>
     <string name="pause">Pause</string>
@@ -22,12 +14,8 @@
     <string name="restart">Restart</string>
     <string name="notification_text">Press play to hear the instruction</string>
     <string name="hear_instructions">Listen</string>
-    <string name="selected_position">SELECTED_POSITION</string>
-    <string name="RECIPE_STATE_INT">INT_STATE</string>
-    <string name="RECIPE_STATE_STRING">STRING_STATE</string>
 
     // widget components
-    <string name="add_widget">Add widget</string>
     <string name="appwidget_ingredients">Ingredients</string>
     <string name="appwidget_text_ingredient_name">Ingredient</string>
     <string name="appwidget_text_quantity">Quantity</string>
@@ -36,5 +24,13 @@
     <string name="not_added_to_widget_message">Recipe Ingredients not added to widget</string>
     <string name="first_step_toast_message">This is the first step</string>
     <string name="last_message_toast_message">This is the last step</string>
+    <string name="main_recipe_image_descr">main_recipe_image</string>
+    <string name="preparation_time_icon_desc">preparation_time_icon</string>
+    <string name="serves_people_icon_desc">serves_people_icon</string>
+    <string name="step_thumbnail_desc">step_thumbnail</string>
+    <string name="add_recipe_menu">Add recipe</string>
+    <string name="previous_button_desc">previous_button</string>
+    <string name="exo_pause_button_desc">exo_pause_button_desc</string>
+    <string name="exo_play_button_desc">exo_play_button_desc</string>
 
 </resources>

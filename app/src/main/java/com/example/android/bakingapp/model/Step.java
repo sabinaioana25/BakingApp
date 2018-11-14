@@ -39,6 +39,7 @@ public class Step extends ArrayList<Parcelable> implements Parcelable {
         dest.writeString(thumbnailUrl);
     }
 
+    @SuppressWarnings("SameReturnValue")
     @Override
     public int describeContents() {
         return 0;

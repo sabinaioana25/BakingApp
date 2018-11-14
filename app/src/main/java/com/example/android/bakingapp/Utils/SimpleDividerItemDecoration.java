@@ -11,7 +11,7 @@ import com.example.android.bakingapp.R;
 
 public class SimpleDividerItemDecoration extends RecyclerView.ItemDecoration {
 
-    private Drawable mDivider;
+    private final Drawable mDivider;
 
     public SimpleDividerItemDecoration(Context context) {
         this.mDivider = ContextCompat.getDrawable(context, R.drawable.border_shape);

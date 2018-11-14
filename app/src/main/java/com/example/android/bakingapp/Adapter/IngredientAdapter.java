@@ -16,16 +16,17 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+@SuppressWarnings("ALL")
 public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter
         .IngredientViewHolder> {
 
     final static String LOG_TAG = Ingredient.class.getSimpleName();
-    public Context context;
+    public final Context context;
     private static List<Ingredient> ingredientList;
 
     public IngredientAdapter(Context context, List<Ingredient> ingredientList) {
         this.context = context;
-        this.ingredientList = ingredientList;
+        IngredientAdapter.ingredientList = ingredientList;
     }
 
     @NonNull

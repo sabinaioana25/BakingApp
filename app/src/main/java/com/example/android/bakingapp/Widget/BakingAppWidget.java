@@ -13,12 +13,14 @@ import com.example.android.bakingapp.R;
  */
 public class BakingAppWidget extends AppWidgetProvider {
 
+    @SuppressWarnings("WeakerAccess")
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 String recipeName,
                                 int appWidgetId) {
 
         RemoteViews views = getIngredientsRemoteListView(context);
         views.setTextViewText(R.id.baking_app_widget_text, recipeName);
+
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);
     }

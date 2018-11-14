@@ -31,6 +31,7 @@ public class NetworkUtils {
         return url;
     }
 
+    @SuppressWarnings("ReturnInsideFinallyBlock")
     public static String makeHttpRequest(URL url) throws IOException {
         String jsonResponse = null;
         if (url == null) {

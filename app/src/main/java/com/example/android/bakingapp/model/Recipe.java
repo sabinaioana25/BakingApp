@@ -101,6 +101,7 @@ public class Recipe implements Parcelable {
         this.steps = steps;
     }
 
+    @SuppressWarnings("SameReturnValue")
     @Override
     public int describeContents() {
         return 0;

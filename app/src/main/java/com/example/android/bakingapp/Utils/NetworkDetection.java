@@ -5,7 +5,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 public class NetworkDetection {
-    Context context;
+    final Context context;
 
     public NetworkDetection(Context context) {
         this.context = context;
@@ -19,9 +19,7 @@ public class NetworkDetection {
             NetworkInfo info = connectivityManager.getActiveNetworkInfo();
 
             if (info != null) {
-                if (info.getState() == NetworkInfo.State.CONNECTED) {
-                    return true;
-                }
+                return info.getState() == NetworkInfo.State.CONNECTED;
             }
         }
         return false;

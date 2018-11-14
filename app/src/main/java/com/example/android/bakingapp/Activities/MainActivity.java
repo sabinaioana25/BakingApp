@@ -10,13 +10,14 @@ import com.example.android.bakingapp.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    //    public static boolean isTablet = false;
-    private final String LOG_TAG = MainActivity.class.getSimpleName();
-    private boolean twoPane;
+// --Commented out by Inspection START (11/14/2018 8:01 PM):
+//    //    public static boolean isTablet = false;
+//    private final String LOG_TAG = MainActivity.class.getSimpleName();
+// --Commented out by Inspection STOP (11/14/2018 8:01 PM)
     FragmentMasterListRecipe fragmentMasterListRecipe;
-    FragmentManager fragmentManager = getSupportFragmentManager();
-    private final String FRAGMENT_RECIPE_LIST = "fragmentMasterRecipe";
+    final FragmentManager fragmentManager = getSupportFragmentManager();
 
+    @SuppressWarnings("ConstantConditions")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,10 +27,12 @@ public class MainActivity extends AppCompatActivity {
         View phone_view = findViewById(R.id.phone_view);
 
         if (savedInstanceState != null) {
+            String FRAGMENT_RECIPE_LIST = "fragmentMasterRecipe";
             fragmentMasterListRecipe = (FragmentMasterListRecipe)
                     getSupportFragmentManager().findFragmentByTag(FRAGMENT_RECIPE_LIST);
         } else {
             fragmentMasterListRecipe = new FragmentMasterListRecipe();
+            boolean twoPane;
             if (tablet_view != null) {
                 twoPane = true;
                 fragmentMasterListRecipe.setTwoPane(twoPane);

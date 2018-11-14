@@ -10,8 +10,8 @@ import java.util.List;
 
 public class RecipeLoader extends android.support.v4.content.AsyncTaskLoader<List<Recipe>> {
 
-    private static final String LOG_TAG = RecipeLoader.class.getSimpleName();
-    private String url;
+    // --Commented out by Inspection (11/14/2018 8:01 PM):private static final String LOG_TAG = RecipeLoader.class.getSimpleName();
+    private final String url;
 
     @SuppressLint("StaticFieldLeak")
     public RecipeLoader(Context context, String url) {

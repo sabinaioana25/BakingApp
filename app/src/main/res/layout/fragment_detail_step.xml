@@ -51,7 +51,8 @@
         <ImageView
             android:id="@+id/detail_activity_step_thumbnail"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/step_thumbnail_desc" />
 
         <TextView
             android:id="@+id/detail_activity_step_description"

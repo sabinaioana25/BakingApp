@@ -5,6 +5,7 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("unused")
 public class Ingredient extends ArrayList<Parcelable> implements Parcelable {
     private String quantity;
     private String measure;
@@ -29,6 +30,7 @@ public class Ingredient extends ArrayList<Parcelable> implements Parcelable {
         dest.writeString(ingredient);
     }
 
+    @SuppressWarnings("SameReturnValue")
     @Override
     public int describeContents() {
         return 0;

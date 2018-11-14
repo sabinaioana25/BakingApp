@@ -50,8 +50,6 @@ public class FragmentDetailStep extends Fragment implements ExoPlayer.EventListe
 
     private static final String LOG_TAG = FragmentDetailStep.class.getSimpleName();
     private static final String VIDEO_FILE_EXT = ".mp4";
-    private Recipe recipe;
-    private int position;
     private int stepIndex;
     private String stepShortDescription;
     private String stepDescription;
@@ -96,12 +94,14 @@ public class FragmentDetailStep extends Fragment implements ExoPlayer.EventListe
             videoPosition = savedInstanceState.getLong(SAVED_STATE_EXO_POSITION);
             stepShortDescription = savedInstanceState.getString(SHORT_DESCRIPTION_KEY);
             stepDescription = savedInstanceState.getString(DESCRIPTION_KEY);
+            initializeMediaPlayer(Uri.parse(stepVideoUrl));
         }
         // initialize the Media Session
         initializeMediaSession();
         return rootView;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onViewCreated(@NonNull View rootView, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(rootView, savedInstanceState);
@@ -140,8 +140,8 @@ public class FragmentDetailStep extends Fragment implements ExoPlayer.EventListe
     }
 
     public void setRecipeStep(Recipe recipe, int position) {
-        this.recipe = recipe;
-        this.position = position;
+        @SuppressWarnings("unused") Recipe recipe1 = recipe;
+        @SuppressWarnings("unused") int position1 = position;
     }
 
     public void setStepIndex(int stepIndex, String stepShortDescription, String stepDescription,
@@ -215,6 +215,7 @@ public class FragmentDetailStep extends Fragment implements ExoPlayer.EventListe
         outState.putString(DESCRIPTION_KEY, stepDescription);
     }
 
+    @SuppressWarnings("ConstantConditions")
     private void initializeMediaPlayer(Uri mediaUri) {
         if (exoPlayer == null) {
             // create an instance of the exoPlayer
@@ -242,6 +243,7 @@ public class FragmentDetailStep extends Fragment implements ExoPlayer.EventListe
         }
     }
 
+    @SuppressWarnings("ConstantConditions")
     private void initializeMediaSession() {
 
         // create a MediaSessionCompat object
@@ -304,6 +306,7 @@ public class FragmentDetailStep extends Fragment implements ExoPlayer.EventListe
 
     // show MediaStyle notification with an action that depends on the current MediaSession
     // PlaybackState
+    @SuppressWarnings("ConstantConditions")
     private void showNotification(PlaybackStateCompat state) {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getContext());
         int icon;
@@ -316,7 +319,8 @@ public class FragmentDetailStep extends Fragment implements ExoPlayer.EventListe
             play_pause = getString(R.string.play);
         }
 
-        NotificationCompat.Action playPauseAction = new NotificationCompat.Action(
+        @SuppressWarnings("ConstantConditions") NotificationCompat.Action playPauseAction = new
+                NotificationCompat.Action(
                 icon, play_pause, MediaButtonReceiver.buildMediaButtonPendingIntent(getContext()
                 , PlaybackStateCompat.ACTION_PLAY_PAUSE));
 

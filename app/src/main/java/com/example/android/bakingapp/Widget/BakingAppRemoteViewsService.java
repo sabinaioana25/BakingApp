@@ -20,10 +20,12 @@ public class BakingAppRemoteViewsService extends RemoteViewsService {
         return new BakingAppWidgetItemFactory(getApplicationContext(), intent);
     }
 
+    @SuppressWarnings("unused")
     class BakingAppWidgetItemFactory implements RemoteViewsService.RemoteViewsFactory {
 
-        private Context context;
-        private int appWidgetId;
+        private final Context context;
+        private final int appWidgetId;
+        @SuppressWarnings("unused")
         private List<Recipe> recipeNameListWidget;
         private List<Ingredient> ingredientListWidget;
 
@@ -60,12 +62,12 @@ public class BakingAppRemoteViewsService extends RemoteViewsService {
                     R.layout.baking_app_widget);
             views.setTextViewText(
                     R.id.appwidget_text_ingredient_name, ingredientListWidget.get
-                    (position).getIngredient());
+                    (position).getIngredient().toUpperCase());
             views.setTextViewText(
                     R.id.appwidget_text_quantity, ingredientListWidget.get
                     (position).getQuantity());
             views.setTextViewText(
-                    R.id.appwidget_text_measure, ingredientListWidget.get(position).getMeasure());
+                    R.id.appwidget_text_measure, ingredientListWidget.get(position).getMeasure().toUpperCase());
             return views;
         }
 
