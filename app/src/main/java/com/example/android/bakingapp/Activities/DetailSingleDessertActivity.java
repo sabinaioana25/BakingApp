@@ -3,6 +3,7 @@ package com.example.android.bakingapp.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -75,6 +76,10 @@ public class DetailSingleDessertActivity extends AppCompatActivity {
                         .commit();
             }
         }
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setTitle(recipeName);
     }
 
     @SuppressWarnings("SameReturnValue")
