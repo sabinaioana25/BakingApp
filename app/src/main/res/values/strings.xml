@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">BakingApp</string>
-    <string name="app_title">Dessert Me More</string>
+    <string name="app_title">Baking Recipes</string>
     <string name="step_name">Step</string>
     <string name="step_title_list">Steps</string>
     <string name="next_step">next step</string>
