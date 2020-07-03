@@ -40,7 +40,8 @@ public class FragmentMasterListRecipe extends Fragment
     private static final String TWO_PANE_KEY = "twoPaneMode";
     private static final String POSITION_KEY = "position";
 
-    // --Commented out by Inspection (11/14/2018 8:00 PM):private final String LOG_TAG = FragmentMasterListRecipe.class.getSimpleName();
+    // --Commented out by Inspection (11/14/2018 8:00 PM):private final String 
+    //                  LOG_TAG = FragmentMasterListRecipe.class.getSimpleName();
     public static final String URL_RECIPE_REQUEST = "https://d17h27t6h515a5.cloudfront" + "" +
             ".net/topher/2017/May/59121517_baking/baking.json";
     boolean twoPane;
